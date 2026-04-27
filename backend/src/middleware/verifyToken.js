@@ -12,7 +12,7 @@ export const verifyToken = async (req, res, next) => {
     if (err) {
       return res.status(401).json({
         success: false,
-        error: "Unutherized",
+        error: "Unutherized, Token invalid or expired",
       });
     }
     req.user = decoded;

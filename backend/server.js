@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import authRouter from "./src/routes/authRoute.js";
 import { chatRouter } from "./src/routes/chatRoute.js";
 import cookieParser from 'cookie-parser';
+import { userRouter } from "./src/routes/userRoute.js";
 
 const app = e();
 connectDB();
@@ -25,6 +26,7 @@ app.get("/", (req, res) => {
 
 app.use("/api", authRouter);
 app.use("/api", chatRouter);
+app.use("/api", userRouter);
 
 const PORT = process.env.PORT || 5050;
 app.listen(PORT)

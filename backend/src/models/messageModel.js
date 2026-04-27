@@ -5,15 +5,16 @@ const messageSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         required: true,
     },
-    receiverId: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-    },
     message: {
         type: String,
         required: true,
         trim: true
     },
+    chatId: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: "Chat",
+    }
 }, {timestamps: true})
 
 const Message = mongoose.model("Message", messageSchema);
