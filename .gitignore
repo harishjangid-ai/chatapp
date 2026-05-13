@@ -1,2 +1,23 @@
 node_modules
+<<<<<<< HEAD
 .env
+=======
+dist
+build
+coverage
+*.log
+.env
+.DS_Store
+.idea
+.vscode
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.bak
+*.tmp
+*.pid
+*.seed
+>>>>>>> ce11869877e308aac0a2baa4e7c8371fe398d509
